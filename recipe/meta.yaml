@@ -1,4 +1,4 @@
-{% set version = '1.0.3' %}
+{% set version = "1.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/findpython_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/findpython/findpython_{{ version }}.tar.gz
-  sha256: 5486535ae2f0a123b630d8eabf93a61b730765f55dfcc8ef4f6e56e7c49408f8
+  sha256: a58fb46d53d3bdea1e00b2f4f9bdb5e98be9329ea9d8e2fe150d91462e6bccfd
 
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/

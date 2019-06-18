@@ -1,4 +1,4 @@
-{% set version = "1.0.4" %}
+{% set version = '1.0.5' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: findpython_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/findpython_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/findpython/findpython_{{ version }}.tar.gz
-  sha256: a58fb46d53d3bdea1e00b2f4f9bdb5e98be9329ea9d8e2fe150d91462e6bccfd
+  sha256: 3e9a21988cb78833769b02680d128a0cc01bcb41aa9c9725ab1742f349759145
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,10 +42,24 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - croth1
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+
+# Package: findpython
+# Type: Package
+# Title: Functions to Find an Acceptable Python Binary
+# Version: 1.0.5
+# Authors@R: c(person("Trevor L", "Davis", role=c("aut", "cre"), email="trevor.l.davis@gmail.com"), person("Paul", "Gilbert", role="aut"))
+# URL: https://github.com/trevorld/findpython
+# BugReports: https://github.com/trevorld/findpython/issues
+# Description: Package designed to find an acceptable python binary.
+# Suggests: covr, reticulate, testthat
+# License: MIT + file LICENSE
+# Collate: 'find_python_cmd.r'
+# RoxygenNote: 6.1.1
+# NeedsCompilation: no
+# Packaged: 2019-03-08 20:15:49 UTC; trevorld
+# Author: Trevor L Davis [aut, cre], Paul Gilbert [aut]
+# Maintainer: Trevor L Davis <trevor.l.davis@gmail.com>
+# Repository: CRAN
+# Date/Publication: 2019-03-08 21:02:48 UTC

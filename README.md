@@ -5,11 +5,9 @@ Home: https://github.com/trevorld/findpython
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-findpython-feedstock/blob/master/LICENSE.txt)
 
 Summary: Package designed to find an acceptable python binary.
-
-
 
 Current build status
 ====================

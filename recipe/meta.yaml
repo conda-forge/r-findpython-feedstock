@@ -1,4 +1,4 @@
-{% set version = "1.0.8" %}
+{% set version = "1.0.9" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/findpython_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/findpython/findpython_{{ version }}.tar.gz
-  sha256: 0f8a90cbafd4949c0333a86808383a358fb7ec3268953d8a4887d5d22264cdb7
+  sha256: b6a15e0cdfcdd4b1cfc76f7e4eaad0125d4d52889711200075280e9b2a2cb7cb
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
